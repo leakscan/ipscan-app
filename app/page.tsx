@@ -11,7 +11,7 @@ export default function HomePage() {
     if (!ip) return;
     setLoading(true);
     try {
-      const res = await fetch(`https://leakscanner.onrender.com/ip/${ip}/score`);
+      const res = await fetch(`https://leakscanner.onrender.com/ip/${ip}/risk`);
       const data = await res.json();
       setResult(data);
     } catch (err) {
